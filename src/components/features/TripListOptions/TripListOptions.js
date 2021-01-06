@@ -8,16 +8,23 @@ class TripListOptions extends React.Component {
   handleTags(tag, checked){
     if(checked) {
       console.log('Adding tag', tag);
-      // TODO - use action dispatcher from props
+      // TODO - use action dispatcher from props ->
+      this.props.filters.tags.push(tag);
+      this.props.changeTags(this.props.filters.tags);
     } else {
       console.log('Removing tag', tag);
-      // TODO - use action dispatcher from props
+      // TODO - use action dispatcher from props ->
+      this.props.filters.tags.pop(tag);
+      const filteredTags = this.props.filters.tags.filter(element => element !== tag);
+      this.props.changeTags(filteredTags);
     }
   }
 
   handleDuration(type, value){
     console.log('Changing duration', type, value);
-    // TODO - use action dispatcher from props
+    // TODO - use action dispatcher from props ->
+    this.props.filters.duration[type] = value;
+    this.props.changeDuration(this.props.filters.duration);
   }
 
   handleSearch(phrase){
@@ -55,7 +62,7 @@ class TripListOptions extends React.Component {
                 <div className={styles.dropdown}>
                   {Object.keys(tags).map(tag => (
                     <label key={tag} className={styles.option}>
-                      <input type='checkbox' checked={filters.tags.indexOf(tag) > -1} onChange={event => this.handleTags(tag, event.currentTarget.checked)} />
+                      <input type='checkbox' checked={filters.filteredTags && filters.filteredTags.includes(tag)} onChange={event => this.handleTags(tag, event.currentTarget.checked)} />
                       {tag}
                     </label>
                   ))}
@@ -73,6 +80,8 @@ TripListOptions.propTypes = {
   tags: PropTypes.object,
   filters: PropTypes.object,
   changeSearchPhrase: PropTypes.func,
+  changeDuration: PropTypes.func,
+  changeTags: PropTypes.func,
 };
 
 export default TripListOptions;
