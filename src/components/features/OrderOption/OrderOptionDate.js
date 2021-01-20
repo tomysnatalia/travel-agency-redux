@@ -10,8 +10,9 @@ const OrderOptionDate = ({currentValue, setOptionValue}) => (
       type="date"
       className={styles.input}
       selected={currentValue}
-      onChange={(date) => setOptionValue(date)}
-      placeholderText={'pick a day'}
+      minDate={new Date()}
+      onChange={value => setOptionValue(value)}
+      placeholderText='pick a day'
 
     />
   </div>
