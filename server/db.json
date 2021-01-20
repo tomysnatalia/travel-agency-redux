@@ -1,0 +1,90 @@
+{
+  "orders": [
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "",
+      "totalCost": "$51,381",
+      "id": 1
+    },
+    {
+      "car-rental": "luxury",
+      "accommodation": "house",
+      "features": [
+        "kitchen"
+      ],
+      "adults": "2",
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "2021-01-25T23:00:00.000Z",
+      "totalCost": "$106,362",
+      "id": 2
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "Nas",
+      "contact": "5269746169",
+      "start-date": "",
+      "totalCost": "$51,381",
+      "id": 3
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "security",
+        "pool",
+        "kitchen",
+        "all-inclusive"
+      ],
+      "adults": "2",
+      "children": 0,
+      "name": "Mary",
+      "contact": "569850352",
+      "start-date": "",
+      "totalCost": "$110,362",
+      "id": 4
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "security",
+        "pool",
+        "kitchen",
+        "all-inclusive"
+      ],
+      "adults": "2",
+      "children": 0,
+      "name": "Mary",
+      "contact": "569850352",
+      "start-date": "",
+      "totalCost": "$110,362",
+      "id": 5
+    },
+    {
+      "car-rental": "",
+      "accommodation": "house",
+      "features": [
+        "pool"
+      ],
+      "adults": "2",
+      "children": 0,
+      "name": "Nas",
+      "contact": "589621568",
+      "start-date": "2021-01-26T23:00:00.000Z",
+      "totalCost": "$106,762",
+      "id": 6
+    }
+  ]
+}

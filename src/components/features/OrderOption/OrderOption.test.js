@@ -175,11 +175,11 @@ for(let type in optionTypes){
           expect(select.length).toBe(1);
         });
 
-        // it('should run setOrderOption function on change', () => {
-        //   renderedSubcomponent.find('input').simulate('change', {currentTarget: {value: testValue}});
-        //   expect(mockSetOrderOption).toBeCalledTimes(1);
-        //   expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue});
-        // });
+        it('should run setOrderOption function on change', () => {
+          renderedSubcomponent.find('input').simulate('change', {currentTarget: {value: testValue}});
+          expect(mockSetOrderOption).toBeCalledTimes(1);
+          expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue});
+        });
         break;
       }
 

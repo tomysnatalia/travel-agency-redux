@@ -3,17 +3,21 @@ import styles from './OrderOption.scss';
 import PropTypes from 'prop-types';
 
 
-const OrderOptionText = ({name}) => (
+const OrderOptionText = ({currentValue, setOptionValue}) => (
   <div className={styles.components}>
     <input
       type="text"
-      name={name}
-    />
+      value={currentValue.name}
+      onChange={event => setOptionValue(event.currentTarget.value)}
+    >
+    </input>
   </div>
 );
 
 OrderOptionText.propTypes = {
   name: PropTypes.string,
+  currentValue: PropTypes.string,
+  setOptionValue: PropTypes.func,
 };
 
 
